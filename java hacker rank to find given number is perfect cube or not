@@ -1,0 +1,55 @@
+Alex has got a Mathematical assignment where he has to find whether a given integer N is a Perfect Cube or not.Write a Java program solution to help Alex
+
+Input Format
+
+First line will contain an integer N
+
+Constraints
+
+N>1 & N<1000
+
+Output Format
+
+return "Perfect Cube" If given integer is a perfect Cube or "Not Perfect Cube" incase it is not
+
+Sample Input 0
+
+125
+Sample Output 0
+
+Perfect Cube
+Sample Input 1
+
+515
+Sample Output 1
+
+Not Perfect Cube
+
+  code:
+  import java.util.Scanner;
+
+public class PerfectCubeChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+
+        int v=0;
+        for (int i = 1; i <= number; i++) {
+            if (i * i * i == number) {
+                v=1;
+                break;
+            }
+        }
+       if(v==1)
+       {
+           System.out.println("Perfect Cube");
+       }
+        else
+        {
+            System.out.println("Not Perfect Cube");
+        }
+        
+
+        scanner.close();
+    }
+}
