@@ -1,0 +1,48 @@
+John has got a Mathematical assignment where he has to find mean of a given set of 3 integers. Write a Java program solution to help John .
+
+Input Format
+
+First line will accept 3 positive intergers
+
+Constraints
+
+All positive integers must be > 1 And < 1000
+
+Output Format
+
+mean of 3 integer values
+
+if the Result is an integer ,then write .0 For Examle result is 5 then ans will be 5.0
+
+if the Result is an decimal value,then After point(.) only one digit required for example 6.3 ,2.7 etc
+
+Sample Input 0
+
+5 7 2
+Sample Output 0
+
+4.6
+
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+        
+        if (num1 <= 1 || num1 >= 1000 || num2 <= 1 || num2 >= 1000 || num3 <= 1 || num3 >= 1000) {
+            System.out.println("Invalid Input");
+            return;
+        }
+           double mean = (num1 + num2 + num3) / 3.0;
+        mean = Math.floor(mean * 10) / 10.0; 
+        
+        
+        System.out.printf("%.1f", mean);
+        
+    
+}}
