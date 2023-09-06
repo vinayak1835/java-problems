@@ -1,0 +1,47 @@
+Shan is playing a game with little raghav. Shan provide a string and a char to raghav and raghav counts the occurrence of same char in the string. write a program to help the raghav to find the occurrence of the char in the string.
+
+Input Format
+
+First line will contain String statement second line will contain single character
+
+Constraints
+
+Maximum length of string can be 50.
+
+Output Format
+
+one ineteger number represent the count of character .
+
+Sample Input 0
+
+she saw a ship in the sea
+s
+Sample Output 0
+
+4
+Sample Input 1
+
+hello dEar students
+e
+Sample Output 1
+
+2
+
+code:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        char c = scanner.nextLine().charAt(0);
+
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == c) {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
