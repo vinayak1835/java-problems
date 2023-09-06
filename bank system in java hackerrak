@@ -1,0 +1,38 @@
+Rahul borrowed an amount from his friend and he needs to repay the total amount within a year with additional interest of 10%. Find the total amount and emi that Rahul has to pay
+
+Input Format
+
+200000
+
+Constraints
+
+The borrowed amount should be in lakhs Interest is based on total amount that Rahul has borrowed from his friend Emi value round off to 2 decimal places
+
+Output Format
+
+220000 18333.33
+
+Sample Input 0
+
+200000
+Sample Output 0
+
+220000
+18333.33
+
+code:
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double b = scanner.nextDouble();
+        double i = 10.0; 
+        double t = b * (1 + (i / 100));
+        double e = t / 12;
+         System.out.printf("%.0f\n", t);
+        System.out.printf("%.2f\n", e);
+        
+    }
+}
